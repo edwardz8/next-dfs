@@ -1,5 +1,43 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+### Todos
+
+- Get all teams
+- Get team roster
+- Get route to view each player's stats 
+
+# API Routes and Documentation
+
+https://gitlab.com/dword4/nhlapi/-/blob/master/swagger/openapi.yaml 
+
+### Team Roster
+
+https://statsapi.web.nhl.com/api/v1/teams/ID/roster 
+
+### Teams
+
+https://gitlab.com/dword4/nhlapi/-/blob/master/stats-api.md#team-stats 
+
+https://statsapi.web.nhl.com/api/v1/teams/ID 
+https://statsapi.web.nhl.com/api/v1/teams/{teamId}
+
+##### All Teams
+?teamId=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30
+
+?expand=team.roster&season=20222023
+
+### People
+
+https://statsapi.web.nhl.com/api/v1/people/ID/stats?stats=statsSingleSeason&season=20222023
+
+##### loop through each player by id on each roster in the 2022 - 2023 season
+
+https://statsapi.web.nhl.com/api/v1/people/8480070/stats?stats=statsSingleSeason&season=20222023
+
+https://statsapi.web.nhl.com/api/v1/people/{playerId}/stats?stats=statsSingleSeason&season={seasonId}
+
+
+
 ## Getting Started
 
 First, run the development server:
@@ -13,19 +51,6 @@ pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
 ## Deploy on Vercel
 

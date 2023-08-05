@@ -1,10 +1,14 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-### Todos
+### Prisma Installation 
 
-- Get all teams
-- Get team roster
-- Get route to view each player's stats 
+npm i -D prisma 
+npm i @prisma/client 
+npx prisma init 
+
+npx prisma db push
+
+Create db.ts file inside app directory for global app access to prisma client
 
 # API Routes and Documentation
 
